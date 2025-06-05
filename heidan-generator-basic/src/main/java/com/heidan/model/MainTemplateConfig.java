@@ -15,10 +15,10 @@ public class MainTemplateConfig {
     /**
      * 作者
      */
-    private String author;
+    private String author = "xiaohei";
 
     /**
      * 输出信息
      */
-    private String outputText;
+    private String outputText = "结果输出：";
 }
