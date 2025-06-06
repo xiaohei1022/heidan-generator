@@ -1,8 +1,8 @@
-package com.heidan.cli.command;
+package com.heidan.maker.cli.command;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.heidan.generator.MainGenerator;
-import com.heidan.model.MainTemplateConfig;
+import com.heidan.maker.generator.file.FileGenerator;
+import com.heidan.maker.model.DataModel;
 import lombok.Data;
 import picocli.CommandLine;
 
@@ -31,9 +31,9 @@ public class GeneratorCommand implements Callable<Integer> {
 
     @Override
     public Integer call() throws Exception {
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        BeanUtil.copyProperties(this, mainTemplateConfig);
-        MainGenerator.doGenerate(mainTemplateConfig);
+        DataModel dataModel = new DataModel();
+        BeanUtil.copyProperties(this, dataModel);
+        FileGenerator.doGenerate(dataModel);
         return 0;
     }
 }
