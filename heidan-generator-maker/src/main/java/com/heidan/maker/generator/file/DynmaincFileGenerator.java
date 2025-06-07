@@ -1,6 +1,7 @@
 package com.heidan.maker.generator.file;
 
 import cn.hutool.core.io.FileUtil;
+import com.heidan.maker.meta.MetaValidator;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -37,6 +38,7 @@ public class DynmaincFileGenerator {
         if (!FileUtil.exist(outputPath)){
             FileUtil.touch(outputPath);
         }
+
         // 生成
         Writer out = new FileWriter(outputPath);
         template.process(model, out);

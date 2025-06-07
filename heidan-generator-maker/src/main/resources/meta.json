@@ -6,7 +6,8 @@
   "author": "xiaohei",
   "createTime": "2025-05-22",
   "fileConfig": {
-    "inputRootPath": "E:/code/heidan-generator/heidan-generator-demo-projects/acm-template-pro",
+    "inputRootPath":".source/acm-template-pro",
+    "sourceRootPath": "E:/code/heidan-generator/heidan-generator-demo-projects/acm-template-pro",
     "outputRootPath": "generated",
     "type": "dir",
     "files": [

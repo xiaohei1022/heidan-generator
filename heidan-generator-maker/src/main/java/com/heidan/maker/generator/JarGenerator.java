@@ -27,8 +27,4 @@ public class JarGenerator {
         int i = process.waitFor();
         System.out.println("命令执行完成，退出码：" + i);
     }
-
-    public static void main(String[] args) throws IOException, InterruptedException {
-        doGenerator("E:\\code\\heidan-generator\\heidan-generator-maker\\generated\\acm-template-pro-generator");
-    }
 }
